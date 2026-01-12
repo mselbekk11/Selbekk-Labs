@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter, STIX_Two_Text } from "next/font/google";
 import "./globals.css";
 import ConvexClientProvider from "@/components/ConvexClientProvider";
 import { ClerkProvider } from "@clerk/nextjs";
 import ConvexClerkUserSync from "@/components/ConvexClerkUserSync";
+import Header from "@/components/header/header";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,6 +15,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const stixTwoText = STIX_Two_Text({
+  variable: "--font-stix-two-text",
   subsets: ["latin"],
 });
 
@@ -31,12 +39,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${stixTwoText.variable} ${inter.variable} antialiased`}
       >
         <ClerkProvider dynamic>
           <ConvexClientProvider>
             <ConvexClerkUserSync />
-            {children}
+            <Header />
+            <main className="pt-16">{children}</main>
           </ConvexClientProvider>
         </ClerkProvider>
       </body>
