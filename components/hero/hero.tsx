@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="mx-auto px-4 pt-28 bg-blue-500">
+    <div className="mx-auto px-4 pt-28 ">
       <div className="max-w-[1300px] mx-auto flex flex-col gap-4 mb-14">
         <h1 className="font-sans">
           Beautiful websites and AI-powered experiences, <br />

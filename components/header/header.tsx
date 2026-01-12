@@ -3,14 +3,14 @@ import { Button } from "@/components/ui/button";
 
 export default function Header() {
   const menuItems = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Services", href: "/services" },
-    { label: "Contact", href: "/contact" },
+    { label: "Serices", href: "/" },
+    { label: "Projects", href: "/about" },
+    { label: "Serices", href: "/boom" },
+    { label: "Projects", href: "/bop" },
   ];
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-background border-b border-border">
+    <header className="fixed top-0 left-0 z-50 w-full bg-background">
       <div className="max-w-[1300px] mx-auto px-4">
         <div className="relative z-2 grid h-16 grid-cols-[1fr_auto_auto] items-center gap-4 lg:grid-cols-[auto_1fr_auto]">
           {/* Logo */}
