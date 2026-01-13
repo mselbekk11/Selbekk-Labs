@@ -10,7 +10,9 @@ export default function Hero() {
           Engineered for agencies and small businesses.
         </h1>
         <div>
-          <Button>Work with me</Button>
+          <Button variant="labs" size="lg">
+            Work with me
+          </Button>
         </div>
       </div>
 
@@ -23,6 +25,8 @@ export default function Hero() {
           className="w-full rounded-[5px]"
         />
       </div>
+
+
     </div>
   );
 }

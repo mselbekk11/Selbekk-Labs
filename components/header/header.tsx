@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import logo from "@/public/logo.svg";
+import Image from "next/image";
 
 export default function Header() {
   const menuItems = [
@@ -10,13 +12,17 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-background">
-      <div className="max-w-[1300px] mx-auto px-4">
-        <div className="relative z-2 grid h-16 grid-cols-[1fr_auto_auto] items-center gap-4 lg:grid-cols-[auto_1fr_auto]">
+    <header className="fixed top-0 left-0 z-50 w-full bg-background px-4">
+      <div className="max-w-[1300px] mx-auto">
+        <div className="relative z-2 flex h-16 items-center justify-between lg:grid lg:grid-cols-[auto_1fr_auto] lg:gap-4">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-semibold">
-              Logo
+            <Link
+              href="/"
+              className="flex items-center gap-2 text-xl font-semibold"
+            >
+              <Image src={logo} alt="Logo" width={20} height={20} />
+              <span className="text-sm font-semibold">Selbekk Labs</span>
             </Link>
           </div>
 
@@ -35,7 +41,7 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="flex items-center justify-end">
-            <Button>Work with me</Button>
+            <Button variant="labs">Work with me</Button>
           </div>
         </div>
       </div>
