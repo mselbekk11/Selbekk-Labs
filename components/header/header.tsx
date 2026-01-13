@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-background px-4">
-      <div className="max-w-[1300px] mx-auto">
+      <div className="max-w-[1300px] mx-auto relative z-10">
         <div className="relative z-2 flex h-16 items-center justify-between lg:grid lg:grid-cols-[auto_1fr_auto] lg:gap-4">
           {/* Logo */}
           <div className="flex items-center">
