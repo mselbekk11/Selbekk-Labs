@@ -18,15 +18,13 @@ export default function Hero() {
 
       <div className="max-w-[1300px] mx-auto flex flex-col">
         <Image
-          src="/sl-hero-2.png"
+          src="/sl-hero-7.png"
           alt="Hero image"
           width={1300}
           height={400}
           className="w-full rounded-[5px]"
         />
       </div>
-
-
     </div>
   );
 }
