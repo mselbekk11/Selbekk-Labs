@@ -1,15 +1,17 @@
 import Image from "next/image";
 import Heading from "../misc/heading";
-import One from "./one";
+// import One from "./one";
 import Two from "./two";
 import Three from "./three";
+import Six from "./AnimatedCodeEditor-2";
+import Seven from "./AnimatedCodeEditor-3";
 
 const services = [
   {
     title: "Development",
     description: "Sed ut perspiciatis unde omnis iste natus error sit",
     image: "/one.png",
-    component: One,
+    component: Seven,
   },
   {
     title: "Integrations",
@@ -34,16 +36,18 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`relative z-10 flex flex-col gap-3 p-4 ${
+              className={`relative z-10 flex flex-col p-4 ${
                 index === 1 ? "lg:border-l lg:border-r border-[#404040]" : ""
               }`}
             >
-              <h3 className="text-white font-sans font-medium">
-                {service.title}
-              </h3>
-              <p className="text-gray-400 font-sans text-sm">
-                {service.description}
-              </p>
+              <div className="flex flex-col mb-4">
+                <h3 className="text-white font-sans font-medium">
+                  {service.title}
+                </h3>
+                <p className="text-gray-400 font-sans text-sm">
+                  {service.description}
+                </p>
+              </div>
               <div className="relative flex-1 min-h-[300px] overflow-hidden">
                 <Image
                   src={service.image}
