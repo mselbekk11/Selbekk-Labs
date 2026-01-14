@@ -23,6 +23,7 @@ const IntegrationsGrid: React.FC<IntegrationsGridProps> = ({
           grid-template-rows: repeat(3, 1fr);
           position: relative;
           overflow: hidden;
+          border-radius: 0.5rem;
         }
 
         .grid-cell {

@@ -52,7 +52,7 @@ export default function Services() {
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-cover"
+                  className="object-cover rounded-lg"
                 />
                 <div
                   className='absolute inset-0 z-10 p-6'

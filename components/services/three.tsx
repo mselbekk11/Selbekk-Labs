@@ -4,7 +4,7 @@ import { DottedGlowBackground } from "@/components/ui/dotted-glow-background";
 
 export default function Three() {
   return (
-    <div className="bg-[#10100D] w-full h-full relative overflow-hidden">
+    <div className="bg-[#10100D] w-full h-full relative overflow-hidden rounded-lg">
       <DottedGlowBackground
         className="pointer-events-none mask-radial-to-90% mask-radial-at-center"
         opacity={2}
