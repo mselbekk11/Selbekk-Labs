@@ -8,19 +8,20 @@ import IntegrationsGrid from "./IntegrationsGrid-2";
 const services = [
   {
     title: "Development",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit",
+    description:
+      "Custom web applications, engineered for speed and reliability",
     image: "/one.png",
     component: One,
   },
   {
     title: "Integrations",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit",
+    description: "From AI features to payments and CRMs, all under one roof",
     image: "/two.png",
     component: IntegrationsGrid,
   },
   {
     title: "Hosting & Maintenance",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit",
+    description: "Fast, secure hosting with reliable, responsive support",
     image: "/three.png",
     component: Three,
   },
