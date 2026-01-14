@@ -1,17 +1,15 @@
 import Image from "next/image";
 import Heading from "../misc/heading";
-// import One from "./one";
+import One from "./one";
 import Two from "./two";
 import Three from "./three";
-import Six from "./AnimatedCodeEditor-2";
-import Seven from "./AnimatedCodeEditor-3";
 
 const services = [
   {
     title: "Development",
     description: "Sed ut perspiciatis unde omnis iste natus error sit",
     image: "/one.png",
-    component: Seven,
+    component: One,
   },
   {
     title: "Integrations",
