@@ -3,7 +3,7 @@ import Heading from "../misc/heading";
 import One from "./one";
 // import Two from "./two";
 import Three from "./three";
-import IntegrationsGrid from "./IntegrationsGrid";
+import IntegrationsGrid from "./IntegrationsGrid-2";
 
 const services = [
   {
@@ -55,9 +55,7 @@ export default function Services() {
                   className="object-cover"
                 />
                 <div
-                  className={`absolute inset-0 z-10 ${
-                    index === 0 ? "pt-4 pb-4 pl-4" : "p-4"
-                  }`}
+                  className='absolute inset-0 z-10 p-6'
                 >
                   <service.component />
                 </div>
