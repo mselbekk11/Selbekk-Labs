@@ -28,7 +28,7 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="mx-auto px-4 pt-20 pb-20">
+    <div className="mx-auto px-4 pt-20">
       <div className="flex flex-col gap-4 max-w-[1300px] mx-auto">
         <Heading title="Services" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-[#404040] rounded-[5px] texture-four min-h-[500px] bg-[#202020]">
@@ -54,9 +54,7 @@ export default function Services() {
                   fill
                   className="object-cover rounded-lg"
                 />
-                <div
-                  className='absolute inset-0 z-10 p-6'
-                >
+                <div className="absolute inset-0 z-10 p-6">
                   <service.component />
                 </div>
               </div>

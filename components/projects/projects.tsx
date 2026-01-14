@@ -9,27 +9,27 @@ const projects = [
   },
   {
     image: "/roam.png",
-    title: "Roam International2",
+    title: "Trizzy.ai",
     description: "Sed ut perspiciatis unde omnis iste natus error sit",
   },
   {
     image: "/roam.png",
-    title: "Roam International3",
+    title: "PicAI.so",
     description: "Sed ut perspiciatis unde omnis iste natus error sit",
   },
   {
     image: "/roam.png",
-    title: "Roam International4",
+    title: "Growth",
     description: "Sed ut perspiciatis unde omnis iste natus error sit",
   },
   {
     image: "/roam.png",
-    title: "Roam International5",
+    title: "Advanced Ortho",
     description: "Sed ut perspiciatis unde omnis iste natus error sit",
   },
   {
     image: "/roam.png",
-    title: "Roam International6",
+    title: "Fire Icons",
     description: "Sed ut perspiciatis unde omnis iste natus error sit",
   },
 ];
@@ -66,20 +66,26 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className={`flex flex-col z-50 items-center justify-center p-4 border-[#404040] ${getBorderClasses(index, projects.length)}`}
+              className={`group relative flex flex-col z-50 items-center justify-center p-4 border-[#404040] ${getBorderClasses(index, projects.length)}`}
             >
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-cover bg-center pointer-events-none"
+                style={{ backgroundImage: "url('/hover.png')" }}
+              />
               <Image
                 src={project.image}
                 alt={project.title}
                 width={300}
                 height={300}
-                className=" rounded-lg py-15"
+                className="relative rounded-lg py-15"
               />
-              <div className="w-full text-left">
+              <div className="relative w-full text-left">
                 <h3 className="text-white font-sans font-medium">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 font-sans text-sm">{project.description}</p>
+                <p className="text-gray-400 font-sans text-sm">
+                  {project.description}
+                </p>
               </div>
             </div>
           ))}
