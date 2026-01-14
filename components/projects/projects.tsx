@@ -59,7 +59,7 @@ const getBorderClasses = (index: number, total: number) => {
 
 export default function Projects() {
   return (
-    <div className="mx-auto px-4 pt-20 pb-20">
+    <div className="mx-auto px-4 pt-20">
       <div className="flex flex-col gap-4 max-w-[1300px] mx-auto">
         <Heading title="Projects" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-[#404040] rounded-[5px] texture-four bg-[#202020] overflow-hidden">
