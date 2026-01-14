@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Heading from "../misc/heading";
 import One from "./one";
-import Two from "./two";
+// import Two from "./two";
 import Three from "./three";
+import IntegrationsGrid from "./IntegrationsGrid";
 
 const services = [
   {
@@ -15,7 +16,7 @@ const services = [
     title: "Integrations",
     description: "Sed ut perspiciatis unde omnis iste natus error sit",
     image: "/two.png",
-    component: Two,
+    component: IntegrationsGrid,
   },
   {
     title: "Hosting & Maintenance",
