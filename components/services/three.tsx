@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import Image from "next/image";
 import { DottedGlowBackground } from "@/components/ui/dotted-glow-background";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
@@ -23,7 +22,7 @@ export default function Three() {
       />
       <div className="absolute inset-0 flex items-center justify-center">
         <HoverBorderGradient
-          containerClassName="rounded-full shadow-[0_0_40px_20px_rgba(0,0,0,0.9)]"
+          containerClassName="rounded-full !bg-[#10100D] shadow-[0_0_40px_20px_rgba(0,0,0,0.9)]"
           as="button"
           className="w-18 h-18 bg-[#10100D] flex items-center justify-center"
         >
