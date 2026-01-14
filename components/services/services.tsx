@@ -4,6 +4,7 @@ import One from "./one";
 // import Two from "./two";
 import Three from "./three";
 import IntegrationsGrid from "./IntegrationsGrid-2";
+import { DottedBorder } from "@/lib/dotted-border";
 
 const services = [
   {
@@ -32,7 +33,8 @@ export default function Services() {
     <div className="mx-auto px-4 pt-30">
       <div className="flex flex-col gap-4 max-w-[1300px] mx-auto">
         <Heading title="Services" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-[#404040] rounded-[5px] texture-four min-h-[500px] bg-[#202020]">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-[#404040] texture-four min-h-[500px] bg-[#202020]">
+          <DottedBorder />
           {services.map((service, index) => (
             <div
               key={service.title}

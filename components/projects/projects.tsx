@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Heading from "../misc/heading";
 import Link from "next/link";
+import { DottedBorder } from "@/lib/dotted-border";
 
 const projects = [
   {
@@ -66,10 +67,11 @@ const getBorderClasses = (index: number, total: number) => {
 
 export default function Projects() {
   return (
-    <div className="mx-auto px-4 pt-30">
+    <div className="mx-auto px-4 pt-40">
       <div className="flex flex-col gap-4 max-w-[1300px] mx-auto">
         <Heading title="Projects" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-[#404040] rounded-[5px] texture-four bg-[#202020] overflow-hidden">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-[#404040] texture-four bg-[#202020] overflow-visible">
+          <DottedBorder />
           {projects.map((project, index) => (
             <Link
               key={project.title}
