@@ -1,36 +1,43 @@
 import Image from "next/image";
 import Heading from "../misc/heading";
+import Link from "next/link";
 
 const projects = [
   {
     image: "/roam.png",
-    title: "Roam International1",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit",
+    title: "Roam International",
+    description: "Luxury travel and investment application",
+    link: "https://www.roaminternational.com/",
   },
   {
-    image: "/roam.png",
-    title: "Trizzy.ai",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit",
+    image: "/trizzy.png",
+    title: "Trizzy",
+    description: "Application to virtually try on clothes with AI",
+    link: "https://www.trizzy.ai/",
   },
   {
-    image: "/roam.png",
-    title: "PicAI.so",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit",
+    image: "/picai.png",
+    title: "PicAI",
+    description: "Transform your selfies into studio quality images using AI",
+    link: "https://www.picai.so/",
   },
   {
-    image: "/roam.png",
+    image: "/growth.png",
     title: "Growth",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit",
+    description: "A Mentorship Programme for personal trainers",
+    link: "https://growth-two.vercel.app/",
   },
   {
-    image: "/roam.png",
+    image: "/aol.png",
     title: "Advanced Ortho",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit",
+    description: "Website for an Orthodontic Appliance manufacturer",
+    link: "https://www.advancedortholabsf.com/",
   },
   {
-    image: "/roam.png",
+    image: "/fire-icons.png",
     title: "Fire Icons",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit",
+    description: "Application to customize and download icons",
+    link: "https://www.fireicons.io/",
   },
 ];
 
@@ -59,13 +66,15 @@ const getBorderClasses = (index: number, total: number) => {
 
 export default function Projects() {
   return (
-    <div className="mx-auto px-4 pt-20">
+    <div className="mx-auto px-4 pt-30">
       <div className="flex flex-col gap-4 max-w-[1300px] mx-auto">
         <Heading title="Projects" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-[#404040] rounded-[5px] texture-four bg-[#202020] overflow-hidden">
           {projects.map((project, index) => (
-            <div
+            <Link
               key={project.title}
+              href={project.link}
+              target="_blank"
               className={`group relative flex flex-col z-50 items-center justify-center p-4 border-[#404040] ${getBorderClasses(index, projects.length)}`}
             >
               <div
@@ -80,14 +89,14 @@ export default function Projects() {
                 className="relative rounded-lg py-15"
               />
               <div className="relative w-full text-left">
-                <h3 className="text-white font-sans font-medium">
+                <p className="text-white font-sans font-medium text-sm">
                   {project.title}
-                </h3>
+                </p>
                 <p className="text-gray-400 font-sans text-sm">
                   {project.description}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -3,46 +3,46 @@ import Heading from "../misc/heading";
 
 const testimonials = [
   {
-    text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem .",
+    text: "The speed at which they delivered our high-quality website was simply remarkable. Their constant availability and the subsequent business growth weve seen is a testament to their outstanding service.",
     title: "Joe D'Cunha",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit",
-    image: "/profile-one.png",
+    description: "Co-Founder & Director - Nielson Place",
+    image: "/profile-shot-joe.png",
   },
   {
-    text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem .",
+    text: "Opting for their web development services resulted in a fantastic website delivered quickly and cost-effectively. Weve observed a remarkable uptick in our business, all thanks to their skillful and attentive work.",
     title: "Andrew Miller",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit",
-    image: "/profile-one.png",
+    description: "Co-Founder & CEO - Kodama",
+    image: "/andrew.png",
   },
   {
-    text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem .",
+    text: "Unmatched in speed and efficiency, their team provided a top-notch website that boosted our online presence and business revenue. Their responsiveness and dedication to our needs were truly exceptional.",
     title: "Danik Budovsky",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit",
-    image: "/profile-one.png",
+    description: "Founder & Owner - Advanced Ortho Labs SF",
+    image: "/danik.png",
   },
   {
-    text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem .",
+    text: "They exceeded every expectation with their swift and efficient website delivery, offering incredible value for money. Our business has experienced substantial growth thanks to their exceptional work.",
     title: "Karl Samsen",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit",
-    image: "/profile-one.png",
+    description: "Head of Capital Markets at SGI",
+    image: "/karl.png",
   },
   {
-    text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem .",
+    text: "The Selbekk Studio team delivered our project with astonishing speed and quality, far exceeding our expectations. Since the launch, our business has seen a noticeable increase in traffic and sales.",
     title: "Per Selbekk",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit",
-    image: "/profile-one.png",
+    description: "Founder & CEO - Renevo Capital",
+    image: "/profile-shot-per.png",
   },
   {
     text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem .",
-    title: "Greg Cussell",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit",
-    image: "/profile-one.png",
+    title: "Chelsea Collindridge",
+    description: "Managing Director at We Are Thrive",
+    image: "/chelsea.png",
   },
 ];
 
 export default function Testimonials() {
   return (
-    <div className="mx-auto px-4 pt-20 pb-20">
+    <div className="mx-auto px-4 pt-30 pb-30">
       <div className="flex flex-col gap-4 max-w-[1300px] mx-auto">
         <Heading title="What people say" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-[5px]  overflow-hidden gap-4">
