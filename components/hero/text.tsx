@@ -10,7 +10,7 @@ export function TextEffectWithCustomDelay() {
       <div className="flex flex-col space-y-0">
         <TextEffect
           per="char"
-          className="text-lg md:text-2xl font-medium tracking-[-0.03em] font-sans text-white"
+          className="text-sm md:text-2xl font-medium tracking-[-0.03em] font-sans text-white"
           delay={0.5}
           variants={{
             container: {
@@ -46,7 +46,7 @@ export function TextEffectWithCustomDelay() {
         <TextEffect
           per="char"
           delay={1.5}
-          className="text-lg md:text-2xl font-medium tracking-[-0.03em] font-sans text-white"
+          className="text-sm md:text-2xl font-medium tracking-[-0.03em] font-sans text-white"
         >
           Engineered for agencies and small businesses.
         </TextEffect>
