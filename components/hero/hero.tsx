@@ -4,7 +4,7 @@ import { DottedBorder } from "@/lib/dotted-border";
 
 export default function Hero() {
   return (
-    <div className="mx-auto px-4 pt-28 ">
+    <div className="mx-auto px-4 pt-14 md:pt-28 ">
       <div className="max-w-[1300px] mx-auto flex flex-col gap-4 mb-14">
         <TextEffectWithCustomDelay />
       </div>
