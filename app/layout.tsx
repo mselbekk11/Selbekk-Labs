@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   },
   description:
     "We develop applications that drive results and help your Business grow. No BS. Just Results.",
-  icons: {
-    icon: "/favicon.svg",
-  },
+  // icons: {
+  //   icon: "/favicon.svg",
+  // },
   keywords: [
     "Web Development",
     "Web Applications",
