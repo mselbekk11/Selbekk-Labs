@@ -161,7 +161,7 @@ export function ContactForm() {
             <Button
               key={service}
               type="button"
-              variant="outline"
+              variant="square"
               className={cn(
                 "flex-1 focus-visible:ring-0 text-xs md:text-sm",
                 selectedServices.includes(service) && "!border-white !bg-white/10",

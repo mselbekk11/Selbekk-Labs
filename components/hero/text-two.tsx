@@ -41,7 +41,8 @@ export function TextEffectMobile() {
             },
           }}
         >
-          Beautiful websites and AI-powered experiences for agencies and small businesses.
+          Beautiful websites and AI-powered experiences for agencies and small
+          businesses.
         </TextEffect>
         {/* <TextEffect
           per="char"
