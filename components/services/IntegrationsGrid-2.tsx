@@ -15,8 +15,9 @@ const IntegrationsGrid: React.FC<IntegrationsGridProps> = ({
       <style>{`
         .integrations-grid {
           width: 100%;
+          height: 100%;
           max-width: 370px;
-          aspect-ratio: 1 / 1;
+          max-height: 370px;
           background-color: #10100D;
           display: grid;
           grid-template-columns: repeat(3, 1fr);
@@ -24,6 +25,14 @@ const IntegrationsGrid: React.FC<IntegrationsGridProps> = ({
           position: relative;
           overflow: hidden;
           border-radius: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+          .integrations-grid {
+            max-width: 100%;
+            max-height: 280px;
+            aspect-ratio: 1 / 1;
+          }
         }
 
         .grid-cell {
@@ -120,6 +129,16 @@ const IntegrationsGrid: React.FC<IntegrationsGridProps> = ({
           font-weight: 600;
           color: #635BFF;
           letter-spacing: -0.5px;
+        }
+
+        @media (max-width: 768px) {
+          .logo-placeholder {
+            width: 28px;
+            height: 28px;
+          }
+          .spanning-logo {
+            padding-left: 10px;
+          }
         }
       `}</style>
 

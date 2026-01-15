@@ -50,7 +50,7 @@ export default function Services() {
                   {service.description}
                 </p>
               </div>
-              <div className="relative flex-1 min-h-[300px] overflow-hidden">
+              <div className="relative flex-1 min-h-[280px] md:min-h-[300px] overflow-hidden">
                 <Image
                   src={service.image}
                   alt={service.title}
