@@ -33,8 +33,8 @@ export default function Services() {
     <div className="mx-auto px-4 pt-20 md:pt-30" id="services">
       <div className="flex flex-col gap-4 max-w-[1300px] mx-auto">
         <Heading title="Services" />
-        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4  md:min-h-[500px] ">
-          <DottedBorder />
+        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:p-4  md:min-h-[500px] ">
+          <DottedBorder className="hidden md:block" />
           {services.map((service, index) => (
             <div
               key={service.title}

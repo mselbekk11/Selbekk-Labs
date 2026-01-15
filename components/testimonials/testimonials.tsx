@@ -49,8 +49,8 @@ export default function Testimonials() {
     >
       <div className="flex flex-col gap-4 max-w-[1300px] mx-auto">
         <Heading title="What people say" />
-        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-[5px] overflow-visible gap-4 p-4">
-          <DottedBorder />
+        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-[5px] overflow-visible gap-4 md:p-4">
+          <DottedBorder className="hidden md:block" />
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.title}
