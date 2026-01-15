@@ -22,6 +22,8 @@ export const horizontalDotStyle = {
   backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 1'%3E%3Crect width='4' height='1' fill='%23505050'/%3E%3C/svg%3E")`,
   maskImage: "linear-gradient(to right, transparent, white 2.5rem, white calc(100% - 2.5rem), transparent)",
   WebkitMaskImage: "linear-gradient(to right, transparent, white 2.5rem, white calc(100% - 2.5rem), transparent)",
+  marginLeft: "-3.5rem",
+  marginRight: "-3.5rem",
 };
 
 // React component for easy reuse
@@ -30,8 +32,8 @@ export function DottedBorder({ className = "" }: { className?: string }) {
     <>
       <div aria-hidden="true" className={`inset-y-0 -left-px z-20 ${className}`} style={verticalDotStyle} />
       <div aria-hidden="true" className={`inset-y-0 -right-px z-20 ${className}`} style={verticalDotStyle} />
-      <div aria-hidden="true" className={`inset-x-0 -top-px z-20 md:-mx-14 ${className}`} style={horizontalDotStyle} />
-      <div aria-hidden="true" className={`inset-x-0 -bottom-px z-20 md:-mx-14 ${className}`} style={horizontalDotStyle} />
+      <div aria-hidden="true" className={`inset-x-0 -top-px z-20 ${className}`} style={horizontalDotStyle} />
+      <div aria-hidden="true" className={`inset-x-0 -bottom-px z-20 ${className}`} style={horizontalDotStyle} />
     </>
   );
 }
