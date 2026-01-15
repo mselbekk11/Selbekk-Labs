@@ -2,7 +2,7 @@
 
 import { TextEffect } from "@/components/motion-primitives/text-effect";
 import { motion } from "motion/react";
-import { Button } from "../ui/button";
+import { CTAButton } from "@/components/contact/cta-button";
 
 export function TextEffectWithCustomDelay() {
   return (
@@ -61,9 +61,7 @@ export function TextEffectWithCustomDelay() {
           delay: 2.5,
         }}
       >
-        <Button variant="labs" size="lg">
-          Work with me
-        </Button>
+        <CTAButton size="lg" />
       </motion.div>
     </div>
   );

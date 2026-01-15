@@ -1,4 +1,4 @@
-import { Button } from "../ui/button";
+import { CTAButton } from "@/components/contact/cta-button";
 import { DitherShaderBackground } from "./dither-shader";
 
 const CTA_HEIGHT = "400px";
@@ -21,9 +21,7 @@ export default function CTA() {
           {/* <p className="text-lg md:text-xl text-white max-w-xl">
             Let&apos;s build something amazing together. Get in touch today.
           </p> */}
-          <Button variant="labs" className="">
-            Work with me
-          </Button>
+          <CTAButton />
         </div>
       </div>
     </div>

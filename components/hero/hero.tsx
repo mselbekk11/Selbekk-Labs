@@ -1,4 +1,3 @@
-import { Button } from "../ui/button";
 import Image from "next/image";
 import { TextEffectWithCustomDelay } from "./text";
 import { DottedBorder } from "@/lib/dotted-border";

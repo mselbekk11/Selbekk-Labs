@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { CTAButton } from "@/components/contact/cta-button";
 import logo from "@/public/logo.svg";
 import Image from "next/image";
 
@@ -40,7 +40,7 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="flex items-center justify-end">
-            <Button variant="labs">Work with me</Button>
+            <CTAButton />
           </div>
         </div>
       </div>
