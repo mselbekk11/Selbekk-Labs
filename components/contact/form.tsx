@@ -14,12 +14,6 @@ import {
   NativeSelect,
   NativeSelectOption,
 } from "@/components/ui/native-select";
-import {
-  Field,
-  FieldLabel,
-  FieldError,
-  FieldGroup,
-} from "@/components/ui/field";
 import { cn } from "@/lib/utils";
 
 const serviceOptions = ["Application", "Website", "Ecommerce"] as const;
@@ -105,76 +99,92 @@ export function ContactForm() {
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">
       {/* Row 1: Name and Email side by side */}
       <div className="grid grid-cols-2 gap-3">
-        <Field data-invalid={!!errors.name}>
-          <FieldLabel htmlFor="name">Name</FieldLabel>
+        <div className="flex flex-col gap-2">
+          <div className="flex justify-between items-center">
+            <label htmlFor="name" className="text-sm font-medium">Name</label>
+            {errors.name && <span className="text-sm text-red-400/80">{errors.name.message}</span>}
+          </div>
           <Input
             id="name"
             placeholder="Your name"
+            className={cn(
+              "focus-visible:ring-0 focus-visible:border-white",
+              errors.name && "border-red-400/80"
+            )}
             {...register("name")}
-            aria-invalid={!!errors.name}
           />
-          <FieldError>{errors.name?.message}</FieldError>
-        </Field>
+        </div>
 
-        <Field data-invalid={!!errors.email}>
-          <FieldLabel htmlFor="email">Email</FieldLabel>
+        <div className="flex flex-col gap-2">
+          <div className="flex justify-between items-center">
+            <label htmlFor="email" className="text-sm font-medium">Email</label>
+            {errors.email && <span className="text-sm text-red-400/80">{errors.email.message}</span>}
+          </div>
           <Input
             id="email"
             type="email"
             placeholder="you@example.com"
+            className={cn(
+              "focus-visible:ring-0 focus-visible:border-white",
+              errors.email && "border-red-400/80"
+            )}
             {...register("email")}
-            aria-invalid={!!errors.email}
           />
-          <FieldError>{errors.email?.message}</FieldError>
-        </Field>
+        </div>
       </div>
 
       {/* Row 2: Project description */}
-      <Field data-invalid={!!errors.project}>
-        <FieldLabel htmlFor="project">Tell me about your project</FieldLabel>
+      <div className="flex flex-col gap-2">
+        <div className="flex justify-between items-center">
+          <label htmlFor="project" className="text-sm font-medium">Tell me about your project</label>
+          {errors.project && <span className="text-sm text-red-400/80">{errors.project.message}</span>}
+        </div>
         <Textarea
           id="project"
           placeholder="Describe your project, goals, and any specific requirements..."
-          rows={4}
+          className={cn(
+            "focus-visible:ring-0 focus-visible:border-white min-h-[150px]",
+            errors.project && "border-red-400/80"
+          )}
           {...register("project")}
-          aria-invalid={!!errors.project}
         />
-        <FieldError>{errors.project?.message}</FieldError>
-      </Field>
+      </div>
 
       {/* Row 3: Services multi-select */}
-      <FieldGroup>
-        <Field data-invalid={!!errors.services}>
-          <FieldLabel>How can I help you?</FieldLabel>
-          <div className="flex gap-2">
-            {serviceOptions.map((service) => (
-              <Button
-                key={service}
-                type="button"
-                variant={selectedServices.includes(service) ? "labs" : "outline"}
-                className={cn(
-                  "flex-1 transition-all",
-                  selectedServices.includes(service) &&
-                    "bg-white text-black"
-                )}
-                onClick={() => toggleService(service)}
-              >
-                {service}
-              </Button>
-            ))}
-          </div>
-          <FieldError>{errors.services?.message}</FieldError>
-        </Field>
-      </FieldGroup>
+      <div className="flex flex-col gap-2">
+        <div className="flex justify-between items-center">
+          <label className="text-sm font-medium">How can I help you?</label>
+          {errors.services && <span className="text-sm text-red-400/80">{errors.services.message}</span>}
+        </div>
+        <div className="flex gap-2">
+          {serviceOptions.map((service) => (
+            <Button
+              key={service}
+              type="button"
+              variant="outline"
+              className={cn(
+                "flex-1 focus-visible:ring-0",
+                selectedServices.includes(service) && "!border-white !bg-white/10",
+                errors.services && "border-red-400/80"
+              )}
+              onClick={() => toggleService(service)}
+            >
+              {service}
+            </Button>
+          ))}
+        </div>
+      </div>
 
       {/* Row 4: Budget dropdown */}
-      <Field data-invalid={!!errors.budget}>
-        <FieldLabel htmlFor="budget">Your Budget</FieldLabel>
+      <div className="flex flex-col gap-2">
+        <div className="flex justify-between items-center">
+          <label htmlFor="budget" className="text-sm font-medium">Your Budget</label>
+          {errors.budget && <span className="text-sm text-red-400/80">{errors.budget.message}</span>}
+        </div>
         <NativeSelect
           id="budget"
-          className="w-full"
+          className={cn("w-full", errors.budget && "[&>select]:border-red-400/80")}
           {...register("budget")}
-          aria-invalid={!!errors.budget}
         >
           <NativeSelectOption value="">Select your budget</NativeSelectOption>
           {budgetOptions.map((option) => (
@@ -183,15 +193,14 @@ export function ContactForm() {
             </NativeSelectOption>
           ))}
         </NativeSelect>
-        <FieldError>{errors.budget?.message}</FieldError>
-      </Field>
+      </div>
 
       {/* Row 5: Submit button */}
       <Button
         type="submit"
         variant="labs"
         size="lg"
-        className="w-full mt-2"
+        className="w-full mt-2 focus-visible:ring-0"
         disabled={isSubmitting}
       >
         {isSubmitting ? "Sending..." : "Send message"}
