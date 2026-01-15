@@ -1,17 +1,19 @@
 import Image from "next/image";
-import { TextEffectWithCustomDelay } from "./text";
 import { DottedBorder } from "@/lib/dotted-border";
+import { TextEffectMobile } from "./text-two";
+import { TextEffectDesktop } from "./text";
 
 export default function Hero() {
   return (
-    <div className="mx-auto px-4 pt-14 md:pt-28 ">
+    <div className="mx-auto px-4 pt-24 md:pt-28 ">
       <div className="max-w-[1300px] mx-auto flex flex-col mb-24 md:mb-14">
-        <TextEffectWithCustomDelay />
+        <TextEffectDesktop />
+        <TextEffectMobile />
       </div>
 
       <div className="max-w-[1300px] mx-auto flex flex-col">
         <div className="relative aspect-2/2 md:aspect-1300/650 bg-[#151515]">
-          <DottedBorder />
+          <DottedBorder className="hidden md:block"/>
           <Image
             src="/sl-hero-7.png"
             alt="Hero image"

@@ -4,13 +4,13 @@ import { TextEffect } from "@/components/motion-primitives/text-effect";
 import { motion } from "motion/react";
 import { CTAButton } from "@/components/contact/cta-button";
 
-export function TextEffectWithCustomDelayTwo() {
+export function TextEffectMobile() {
   return (
-    <div className="flex flex-col gap-0 md:gap-4">
+    <div className="flex md:hidden flex-col gap-0 md:gap-4">
       <div className="flex flex-col space-y-0">
         <TextEffect
           per="char"
-          className="text-sm md:text-2xl font-medium tracking-[-0.03em] font-sans text-white"
+          className="text-2xl font-medium tracking-[-0.03em] font-sans text-white"
           delay={0.5}
           variants={{
             container: {
@@ -41,15 +41,15 @@ export function TextEffectWithCustomDelayTwo() {
             },
           }}
         >
-          Beautiful websites.
+          Beautiful websites and AI-powered experiences for agencies and small businesses.
         </TextEffect>
-        <TextEffect
+        {/* <TextEffect
           per="char"
           delay={1.5}
           className="text-sm md:text-2xl font-medium tracking-[-0.03em] font-sans text-white"
         >
           AI-powered experiences for agencies and small businesses.
-        </TextEffect>
+        </TextEffect> */}
       </div>
       <motion.div
         className="w-full"
