@@ -7,5 +7,13 @@ export default defineSchema({
     name: v.string(),
     email: v.string(),
   }).index("by_token", ["tokenIdentifier"]),
-  // ... your other tables
+
+  contactForm: defineTable({
+    name: v.string(),
+    email: v.string(),
+    project: v.string(),
+    services: v.array(v.string()),
+    budget: v.string(),
+    createdAt: v.number(),
+  }).index("by_email", ["email"]),
 });

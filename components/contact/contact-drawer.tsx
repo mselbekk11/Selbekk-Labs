@@ -5,14 +5,13 @@ import {
   DrawerClose,
   DrawerContent,
   DrawerDescription,
-  DrawerFooter,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
-import Form from "./form";
+import { ContactForm } from "./form";
+import { VisuallyHidden } from "radix-ui";
 
 interface ContactDrawerProps {
   children: React.ReactNode;
@@ -22,39 +21,29 @@ export function ContactDrawer({ children }: ContactDrawerProps) {
   return (
     <Drawer direction="right">
       <DrawerTrigger asChild>{children}</DrawerTrigger>
-      <DrawerContent className="h-full">
+      <DrawerContent className="h-full p-8">
         <DrawerHeader className="relative">
-          <DrawerClose asChild>
-            <button className="absolute right-4 top-4 text-gray-400 hover:text-white transition-colors">
-              <X className="h-5 w-5" />
-            </button>
-          </DrawerClose>
-          <DrawerTitle className="text-xl">Get in touch</DrawerTitle>
-          <DrawerDescription>
+          <div className="flex items-center justify-between mb-8">
+            <h2>Get in touch</h2>
+            <DrawerClose asChild>
+              <button className=" text-gray-400 hover:text-white transition-colors">
+                <X className="h-5 w-5" />
+              </button>
+            </DrawerClose>
+          </div>
+          <VisuallyHidden.Root>
+            {" "}
+            <DrawerTitle className="text-xl">Get in touch</DrawerTitle>
+          </VisuallyHidden.Root>
+          {/* <DrawerDescription>
             Fill out the form below and I&apos;ll get back to you as soon as
             possible.
-          </DrawerDescription>
+          </DrawerDescription> */}
         </DrawerHeader>
 
-        {/*
-          =============================================
-          CONTACT FORM - Edit your form fields below
-          =============================================
-        */}
-        <div className="flex-1 overflow-y-auto px-4">
-          <Form />
+        <div className="flex-1 overflow-y-auto pb-6">
+          <ContactForm />
         </div>
-        {/*
-          =============================================
-          END CONTACT FORM
-          =============================================
-        */}
-
-        <DrawerFooter>
-          <Button variant="labs" className="w-full">
-            Send message
-          </Button>
-        </DrawerFooter>
       </DrawerContent>
     </Drawer>
   );
