@@ -5,6 +5,7 @@ import ConvexClientProvider from "@/components/ConvexClientProvider";
 import { ClerkProvider } from "@clerk/nextjs";
 import ConvexClerkUserSync from "@/components/ConvexClerkUserSync";
 import Header from "@/components/header/header";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -114,6 +115,7 @@ export default function RootLayout({
           </ConvexClientProvider>
         </ClerkProvider>
       </body>
+      <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
     </html>
   );
 }
