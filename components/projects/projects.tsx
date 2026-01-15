@@ -48,8 +48,10 @@ const getBorderClasses = (index: number, total: number) => {
   // Mobile (1 col): border-b on all except last
   if (index < total - 1) classes.push("border-b");
 
-  // MD (2 cols): border-r on left column, remove border-b on last row
+  // MD (2 cols): border-r on left column, border-b on top row
   if (index % 2 === 0 && index < total - 1) classes.push("md:border-r");
+  // Top row needs border-b on md (items 0-3)
+  if (index < total - 2) classes.push("md:border-b");
   if (index >= total - 2) classes.push("md:border-b-0");
 
   // LG (3 cols): adjust borders
@@ -59,8 +61,10 @@ const getBorderClasses = (index: number, total: number) => {
   if (index % 3 === 0 && index % 2 !== 0) classes.push("lg:border-r");
   // Add border-r to middle column on lg
   if (index % 3 === 1) classes.push("lg:border-r");
-  // Item 3 needs border-b removed on lg (it's in last row on lg but not md)
-  if (index === total - 3) classes.push("lg:border-b-0");
+  // Top row needs border-b on lg (items 0, 1, 2)
+  if (index < 3) classes.push("lg:border-b");
+  // Bottom row needs no border-b on lg
+  if (index >= total - 3) classes.push("lg:border-b-0");
 
   return classes.join(" ");
 };
