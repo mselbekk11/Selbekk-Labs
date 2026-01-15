@@ -41,10 +41,10 @@ export default function Services() {
               className={`relative z-10 flex flex-col p-4 texture-four bg-[#202020] border border-[#2d2d2d]`}
             >
               <div className="flex flex-col mb-4">
-                <h3 className="text-white font-sans font-medium">
+                <h3 className="text-white font-sans font-medium text-sm md:text-base">
                   {service.title}
                 </h3>
-                <p className="text-gray-400 font-sans text-sm">
+                <p className="text-gray-400 font-sans text-xs md:text-sm">
                   {service.description}
                 </p>
               </div>
