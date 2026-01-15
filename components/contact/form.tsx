@@ -101,14 +101,14 @@ export function ContactForm() {
       <div className="grid grid-cols-2 gap-3">
         <div className="flex flex-col gap-2">
           <div className="flex justify-between items-center">
-            <label htmlFor="name" className="text-sm font-medium">Name</label>
-            {errors.name && <span className="text-sm text-red-400/80">{errors.name.message}</span>}
+            <label htmlFor="name" className="text-xs md:text-sm font-medium">Name</label>
+            {errors.name && <span className="text-xs md:text-sm text-red-400/80">{errors.name.message}</span>}
           </div>
           <Input
             id="name"
             placeholder="Your name"
             className={cn(
-              "focus-visible:ring-0 focus-visible:border-white",
+              "focus-visible:ring-0 focus-visible:border-white text-xs md:text-sm",
               errors.name && "border-red-400/80"
             )}
             {...register("name")}
@@ -117,15 +117,15 @@ export function ContactForm() {
 
         <div className="flex flex-col gap-2">
           <div className="flex justify-between items-center">
-            <label htmlFor="email" className="text-sm font-medium">Email</label>
-            {errors.email && <span className="text-sm text-red-400/80">{errors.email.message}</span>}
+            <label htmlFor="email" className="text-xs md:text-sm font-medium">Email</label>
+            {errors.email && <span className="text-xs md:text-sm text-red-400/80">{errors.email.message}</span>}
           </div>
           <Input
             id="email"
             type="email"
             placeholder="you@example.com"
             className={cn(
-              "focus-visible:ring-0 focus-visible:border-white",
+              "focus-visible:ring-0 focus-visible:border-white text-xs md:text-sm",
               errors.email && "border-red-400/80"
             )}
             {...register("email")}
@@ -136,14 +136,14 @@ export function ContactForm() {
       {/* Row 2: Project description */}
       <div className="flex flex-col gap-2">
         <div className="flex justify-between items-center">
-          <label htmlFor="project" className="text-sm font-medium">Tell me about your project</label>
-          {errors.project && <span className="text-sm text-red-400/80">{errors.project.message}</span>}
+          <label htmlFor="project" className="text-xs md:text-sm font-medium">Tell me about your project</label>
+          {errors.project && <span className="text-xs md:text-sm text-red-400/80">{errors.project.message}</span>}
         </div>
         <Textarea
           id="project"
           placeholder="Describe your project, goals, and any specific requirements..."
           className={cn(
-            "focus-visible:ring-0 focus-visible:border-white min-h-[150px]",
+            "focus-visible:ring-0 focus-visible:border-white min-h-[150px] text-xs md:text-sm",
             errors.project && "border-red-400/80"
           )}
           {...register("project")}
@@ -153,8 +153,8 @@ export function ContactForm() {
       {/* Row 3: Services multi-select */}
       <div className="flex flex-col gap-2">
         <div className="flex justify-between items-center">
-          <label className="text-sm font-medium">How can I help you?</label>
-          {errors.services && <span className="text-sm text-red-400/80">{errors.services.message}</span>}
+          <label className="text-xs md:text-sm font-medium">How can I help you?</label>
+          {errors.services && <span className="text-xs md:text-sm text-red-400/80">{errors.services.message}</span>}
         </div>
         <div className="flex gap-2">
           {serviceOptions.map((service) => (
@@ -163,7 +163,7 @@ export function ContactForm() {
               type="button"
               variant="outline"
               className={cn(
-                "flex-1 focus-visible:ring-0",
+                "flex-1 focus-visible:ring-0 text-xs md:text-sm",
                 selectedServices.includes(service) && "!border-white !bg-white/10",
                 errors.services && "border-red-400/80"
               )}
@@ -178,12 +178,12 @@ export function ContactForm() {
       {/* Row 4: Budget dropdown */}
       <div className="flex flex-col gap-2">
         <div className="flex justify-between items-center">
-          <label htmlFor="budget" className="text-sm font-medium">Your Budget</label>
-          {errors.budget && <span className="text-sm text-red-400/80">{errors.budget.message}</span>}
+          <label htmlFor="budget" className="text-xs md:text-sm font-medium">Your Budget</label>
+          {errors.budget && <span className="text-xs md:text-sm text-red-400/80">{errors.budget.message}</span>}
         </div>
         <NativeSelect
           id="budget"
-          className={cn("w-full", errors.budget && "[&>select]:border-red-400/80")}
+          className={cn("w-full [&>select]:text-xs [&>select]:md:text-sm", errors.budget && "[&>select]:border-red-400/80")}
           {...register("budget")}
         >
           <NativeSelectOption value="">Select your budget</NativeSelectOption>
