@@ -27,13 +27,13 @@ export const horizontalDotStyle = {
 };
 
 // React component for easy reuse
-export function DottedBorder() {
+export function DottedBorder({ className = "" }: { className?: string }) {
   return (
     <>
-      <div aria-hidden="true" className="inset-y-0 -left-px" style={verticalDotStyle} />
-      <div aria-hidden="true" className="inset-y-0 -right-px" style={verticalDotStyle} />
-      <div aria-hidden="true" className="inset-x-0 -top-px" style={horizontalDotStyle} />
-      <div aria-hidden="true" className="inset-x-0 -bottom-px" style={horizontalDotStyle} />
+      <div aria-hidden="true" className={`inset-y-0 -left-px z-20 ${className}`} style={verticalDotStyle} />
+      <div aria-hidden="true" className={`inset-y-0 -right-px z-20 ${className}`} style={verticalDotStyle} />
+      <div aria-hidden="true" className={`inset-x-0 -top-px z-20 ${className}`} style={horizontalDotStyle} />
+      <div aria-hidden="true" className={`inset-x-0 -bottom-px z-20 ${className}`} style={horizontalDotStyle} />
     </>
   );
 }

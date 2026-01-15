@@ -33,13 +33,13 @@ export default function Services() {
     <div className="mx-auto px-4 pt-20 md:pt-30" id="services">
       <div className="flex flex-col gap-4 max-w-[1300px] mx-auto">
         <Heading title="Services" />
-        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-[#404040] texture-four min-h-[500px] bg-[#202020]">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-0 md:border md:border-[#404040] md:texture-four md:min-h-[500px] md:bg-[#202020]">
           <DottedBorder />
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`relative z-10 flex flex-col p-4 ${
-                index === 1 ? "lg:border-l lg:border-r border-[#404040]" : ""
+              className={`relative z-10 flex flex-col p-4 border border-[#404040] texture-four bg-[#202020] md:border-0 md:!bg-transparent md:!bg-none ${
+                index === 1 ? "lg:border-l lg:border-r lg:border-[#404040]" : ""
               }`}
             >
               <div className="flex flex-col mb-4">

@@ -70,17 +70,17 @@ export default function Projects() {
     <div className="mx-auto px-4 pt-20 md:pt-40" id="projects">
       <div className="flex flex-col gap-4 max-w-[1300px] mx-auto">
         <Heading title="Projects" />
-        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-[#404040] texture-four bg-[#202020] overflow-visible">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-0 md:border md:border-[#404040] md:texture-four md:bg-[#202020] overflow-visible">
           <DottedBorder />
           {projects.map((project, index) => (
             <Link
               key={project.title}
               href={project.link}
               target="_blank"
-              className={`group relative flex flex-col z-50 items-center justify-center p-4 border-[#404040] ${getBorderClasses(index, projects.length)}`}
+              className={`group relative flex flex-col items-center justify-center p-4 border border-[#404040] texture-four bg-[#202020] md:border-0 md:bg-transparent md:bg-none md:z-50 ${getBorderClasses(index, projects.length)}`}
             >
               <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-cover bg-center pointer-events-none"
+                className="absolute inset-0 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 bg-cover bg-center pointer-events-none"
                 style={{ backgroundImage: "url('/hover.png')" }}
               />
               <Image
