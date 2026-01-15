@@ -6,7 +6,7 @@ import { CTAButton } from "@/components/contact/cta-button";
 
 export function TextEffectWithCustomDelay() {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-0 md:gap-4">
       <div className="flex flex-col space-y-0">
         <TextEffect
           per="char"
@@ -61,7 +61,7 @@ export function TextEffectWithCustomDelay() {
           delay: 2.5,
         }}
       >
-        <CTAButton size="lg" />
+        <CTAButton size="lg" className="hidden md:block" />
       </motion.div>
     </div>
   );
