@@ -4,6 +4,12 @@ import { DottedBorder } from "@/lib/dotted-border";
 
 const testimonials = [
   {
+    text: "Morgan is the contractor that we all want, but often struggle to find. Professional, personable, and incredibly skilled at what he does. Morgan truly cares, he goes the extra mile always and delivers above standard. I wouldn’t recommend anyone else.",
+    title: "Chelsea Collindridge",
+    description: "Managing Director at We Are Thrive",
+    image: "/chelsea.png",
+  },
+  {
     text: "The speed at which they delivered our high-quality website was simply remarkable. Their constant availability and the subsequent business growth weve seen is a testament to their outstanding service.",
     title: "Joe D'Cunha",
     description: "Co-Founder & Director - Nielson Place",
@@ -33,17 +39,14 @@ const testimonials = [
     description: "Founder & CEO - Renevo Capital",
     image: "/profile-shot-per.png",
   },
-  {
-    text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem .",
-    title: "Chelsea Collindridge",
-    description: "Managing Director at We Are Thrive",
-    image: "/chelsea.png",
-  },
 ];
 
 export default function Testimonials() {
   return (
-    <div className="mx-auto px-4 pt-20 md:pt-40 pb-20 md:pb-40" id="testimonials">
+    <div
+      className="mx-auto px-4 pt-20 md:pt-40 pb-20 md:pb-40"
+      id="testimonials"
+    >
       <div className="flex flex-col gap-4 max-w-[1300px] mx-auto">
         <Heading title="What people say" />
         <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-[5px] overflow-visible gap-4 p-4">

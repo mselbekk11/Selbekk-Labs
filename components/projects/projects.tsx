@@ -42,46 +42,19 @@ const projects = [
   },
 ];
 
-const getBorderClasses = (index: number, total: number) => {
-  const classes: string[] = [];
-
-  // Mobile (1 col): border-b on all except last
-  if (index < total - 1) classes.push("border-b");
-
-  // MD (2 cols): border-r on left column, border-b on top row
-  if (index % 2 === 0 && index < total - 1) classes.push("md:border-r");
-  // Top row needs border-b on md (items 0-3)
-  if (index < total - 2) classes.push("md:border-b");
-  if (index >= total - 2) classes.push("md:border-b-0");
-
-  // LG (3 cols): adjust borders
-  // Remove border-r from items that had it on md but are in last column on lg
-  if (index % 3 === 2 && index % 2 === 0) classes.push("lg:border-r-0");
-  // Add border-r to first column on lg (odd indices that didn't have md:border-r)
-  if (index % 3 === 0 && index % 2 !== 0) classes.push("lg:border-r");
-  // Add border-r to middle column on lg
-  if (index % 3 === 1) classes.push("lg:border-r");
-  // Top row needs border-b on lg (items 0, 1, 2)
-  if (index < 3) classes.push("lg:border-b");
-  // Bottom row needs no border-b on lg
-  if (index >= total - 3) classes.push("lg:border-b-0");
-
-  return classes.join(" ");
-};
-
 export default function Projects() {
   return (
     <div className="mx-auto px-4 pt-20 md:pt-40" id="projects">
       <div className="flex flex-col gap-4 max-w-[1300px] mx-auto">
         <Heading title="Projects" />
-        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-0 md:border md:border-[#404040] md:texture-four md:bg-[#202020] overflow-visible">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 overflow-visible">
           <DottedBorder />
           {projects.map((project, index) => (
             <Link
               key={project.title}
               href={project.link}
               target="_blank"
-              className={`group relative flex flex-col items-center justify-center p-4 border border-[#404040] texture-four bg-[#202020] md:border-0 md:bg-transparent md:bg-none md:z-50 ${getBorderClasses(index, projects.length)}`}
+              className={`group relative flex flex-col items-center justify-center p-4 border border-[#404040] texture-four bg-[#202020] md:z-50`}
             >
               <div
                 className="absolute inset-0 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 bg-cover bg-center pointer-events-none"
@@ -92,7 +65,7 @@ export default function Projects() {
                 alt={project.title}
                 width={300}
                 height={300}
-                className="relative rounded-lg py-15"
+                className="relative rounded-lg py-10 md:py-15"
               />
               <div className="relative w-full text-left">
                 <p className="text-white font-sans font-medium text-sm">
