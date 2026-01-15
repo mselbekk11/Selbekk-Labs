@@ -4,7 +4,7 @@ import { TextEffect } from "@/components/motion-primitives/text-effect";
 import { motion } from "motion/react";
 import { CTAButton } from "@/components/contact/cta-button";
 
-export function TextEffectWithCustomDelay() {
+export function TextEffectWithCustomDelayTwo() {
   return (
     <div className="flex flex-col gap-0 md:gap-4">
       <div className="flex flex-col space-y-0">
@@ -41,14 +41,14 @@ export function TextEffectWithCustomDelay() {
             },
           }}
         >
-          Beautiful websites & AI-powered experiences,
+          Beautiful websites.
         </TextEffect>
         <TextEffect
           per="char"
           delay={1.5}
           className="text-sm md:text-2xl font-medium tracking-[-0.03em] font-sans text-white"
         >
-          Engineered for agencies & small businesses.
+          AI-powered experiences for agencies and small businesses.
         </TextEffect>
       </div>
       <motion.div
