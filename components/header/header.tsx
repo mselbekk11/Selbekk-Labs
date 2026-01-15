@@ -5,9 +5,9 @@ import Image from "next/image";
 
 export default function Header() {
   const menuItems = [
-    { label: "Serices", href: "/" },
-    { label: "Projects", href: "/about" },
-    { label: "Testimonials", href: "/boom" },
+    { label: "Services", href: "/#services" },
+    { label: "Projects", href: "/#projects" },
+    { label: "Testimonials", href: "/#testimonials" },
   ];
 
   return (

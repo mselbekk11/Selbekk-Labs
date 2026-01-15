@@ -43,7 +43,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <div className="mx-auto px-4 pt-40 pb-40">
+    <div className="mx-auto px-4 pt-40 pb-40" id="testimonials">
       <div className="flex flex-col gap-4 max-w-[1300px] mx-auto">
         <Heading title="What people say" />
         <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-[5px] overflow-visible gap-4 p-4">
