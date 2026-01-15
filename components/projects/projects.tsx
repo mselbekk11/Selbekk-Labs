@@ -54,7 +54,7 @@ export default function Projects() {
               key={project.title}
               href={project.link}
               target="_blank"
-              className={`group relative flex flex-col items-center justify-center p-4 border border-[#404040] texture-four bg-[#202020] md:z-50`}
+              className={`group relative flex flex-col items-center justify-center p-4 border border-[#2d2d2d] texture-four bg-[#202020] md:z-50`}
             >
               <div
                 className="absolute inset-0 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 bg-cover bg-center pointer-events-none"

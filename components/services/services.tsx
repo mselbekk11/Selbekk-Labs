@@ -38,7 +38,7 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`relative z-10 flex flex-col p-4 texture-four bg-[#202020] md:border-0`}
+              className={`relative z-10 flex flex-col p-4 texture-four bg-[#202020] border border-[#2d2d2d]`}
             >
               <div className="flex flex-col mb-4">
                 <h3 className="text-white font-sans font-medium">
