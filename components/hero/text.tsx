@@ -48,7 +48,7 @@ export function TextEffectWithCustomDelay() {
           delay={1.5}
           className="text-sm md:text-2xl font-medium tracking-[-0.03em] font-sans text-white"
         >
-          Engineered for agencies and small businesses
+          Engineered for agencies and small businesses.
         </TextEffect>
       </div>
       <motion.div
