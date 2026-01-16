@@ -54,9 +54,9 @@ export default function Testimonials() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.title}
-              className={`group relative flex flex-col z-50 items-center justify-center p-4 border border-[#2d2d2d] texture-four bg-[#202020] `}
+              className={`group relative flex flex-col z-50 items-center p-4 border border-[#2d2d2d] texture-four bg-[#202020] h-full min-h-[250px]`}
             >
-              <div className="flex flex-col gap-12 z-50">
+              <div className="flex flex-col justify-between h-full z-50">
                 <p className="text-sm text-gray-400">{testimonial.text}</p>
                 <div className="flex items-center gap-4">
                   <Image
