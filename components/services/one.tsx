@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, CSSProperties, JSX } from "react";
+import { useState, useEffect, useCallback, useRef, CSSProperties, JSX } from "react";
 
 // ============================================
 // CUSTOMIZATION - Edit these values
@@ -215,6 +215,27 @@ const TOKEN_PATTERNS: { pattern: RegExp; type: keyof typeof tokenStyles }[] = [
 export default function One() {
   const [displayedCode, setDisplayedCode] = useState("");
   const [cursorVisible, setCursorVisible] = useState(true);
+  const [isInView, setIsInView] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Intersection Observer to detect when component enters viewport
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect(); // Only trigger once
+        }
+      },
+      { threshold: 0.3 } // Start when 30% visible
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -223,7 +244,10 @@ export default function One() {
     return () => clearInterval(interval);
   }, []);
 
+  // Only start typing animation when in view
   useEffect(() => {
+    if (!isInView) return;
+
     let charIndex = 0;
     let timeoutId: NodeJS.Timeout;
 
@@ -242,7 +266,7 @@ export default function One() {
 
     timeoutId = setTimeout(typeNextChar, CONFIG.startDelay);
     return () => clearTimeout(timeoutId);
-  }, []);
+  }, [isInView]);
 
   const highlightCode = useCallback(
     (code: string) => {
@@ -320,7 +344,7 @@ export default function One() {
   );
 
   return (
-    <div style={styles.container}>
+    <div ref={containerRef} style={styles.container}>
       <div style={styles.window}>
         <div style={styles.titleBar}>
           <div style={styles.windowControls}>
