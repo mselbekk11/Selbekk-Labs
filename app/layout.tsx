@@ -44,6 +44,8 @@ export const metadata: Metadata = {
     "Software Development",
     "AI Development",
     "AI Products",
+    "Morgan Selbekk",
+    "Selbekk",
   ],
   authors: [{ name: "Morgan Selbekk" }],
   creator: "Morgan Selbekk",
