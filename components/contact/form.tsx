@@ -71,6 +71,7 @@ export function ContactForm() {
 
   const onSubmit = async (data: FormData) => {
     try {
+      // Save to Convex database
       await submitForm({
         name: data.name,
         email: data.email,
@@ -78,6 +79,20 @@ export function ContactForm() {
         services: data.services,
         budget: data.budget,
       });
+
+      // Send email notification
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          project: data.project,
+          services: data.services,
+          budget: data.budget,
+        }),
+      });
+
       setIsSubmitted(true);
     } catch (error) {
       console.error("Failed to submit form:", error);
