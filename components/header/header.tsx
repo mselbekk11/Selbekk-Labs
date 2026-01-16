@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "motion/react";
 import { CTAButton } from "@/components/contact/cta-button";
 import logo from "@/public/logo.svg";
 import Image from "next/image";
@@ -11,7 +14,16 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-background px-4">
+    <motion.header
+      className="fixed top-0 left-0 z-50 w-full bg-background px-4"
+      initial={{ opacity: 0, y: -15 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.6,
+        ease: [0.25, 0.1, 0.25, 1],
+        delay: 0.3,
+      }}
+    >
       <div className="max-w-[1300px] mx-auto relative z-10">
         <div className="relative z-2 flex h-16 items-center justify-between lg:grid lg:grid-cols-[auto_1fr_auto] lg:gap-4">
           {/* Logo */}
@@ -44,6 +56,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }

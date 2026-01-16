@@ -1,8 +1,8 @@
 "use client";
 
+import { useState, useEffect, ComponentProps } from "react";
 import { Button } from "@/components/ui/button";
 import { ContactDrawer } from "./contact-drawer";
-import { ComponentProps } from "react";
 
 type ButtonProps = ComponentProps<typeof Button>;
 
@@ -15,6 +15,21 @@ export function CTAButton({
   variant = "labs",
   ...props
 }: CTAButtonProps) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Render button without drawer on server to avoid hydration mismatch
+  if (!mounted) {
+    return (
+      <Button variant={variant} {...props}>
+        {children}
+      </Button>
+    );
+  }
+
   return (
     <ContactDrawer>
       <Button variant={variant} {...props}>

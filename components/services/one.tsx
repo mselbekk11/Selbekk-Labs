@@ -1,6 +1,13 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef, CSSProperties, JSX } from "react";
+import {
+  useState,
+  useEffect,
+  useCallback,
+  useRef,
+  CSSProperties,
+  JSX,
+} from "react";
 
 // ============================================
 // CUSTOMIZATION - Edit these values
@@ -227,7 +234,7 @@ export default function One() {
           observer.disconnect(); // Only trigger once
         }
       },
-      { threshold: 0.3 } // Start when 30% visible
+      { threshold: 0.3 }, // Start when 30% visible
     );
 
     if (containerRef.current) {
