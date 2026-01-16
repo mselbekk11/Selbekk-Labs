@@ -37,12 +37,12 @@ export function ContactFormEmail({
               <Img
                 src="https://selbekk.dev/logo-black.png"
                 width="40"
-                height="37"
+                height="40"
                 alt="Selbekk Labs Logo"
                 className="mx-auto my-0"
               />
             </Section>
-            <Heading className="mx-0 my-[30px] p-0 text-center font-normal text-[24px] text-black">
+            <Heading className="mx-0 my-[30px] p-0 text-center font-normal text-[18px] text-black">
               New Contact Form Submission
             </Heading>
             <Text className="text-[14px] text-black leading-[24px]">
