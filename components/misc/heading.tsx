@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
+import Image from "next/image";
 import { TextEffect } from "@/components/motion-primitives/text-effect";
 
 export default function Heading({ title }: { title: string }) {
@@ -15,7 +16,7 @@ export default function Heading({ title }: { title: string }) {
           observer.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     if (containerRef.current) {
@@ -26,7 +27,10 @@ export default function Heading({ title }: { title: string }) {
   }, []);
 
   return (
-    <div ref={containerRef} className="flex flex-col md:pl-5">
+    <div
+      ref={containerRef}
+      className="flex items-center justify-between md:px-5"
+    >
       {isInView ? (
         <TextEffect
           per="char"
@@ -55,6 +59,13 @@ export default function Heading({ title }: { title: string }) {
       ) : (
         <h2 className="opacity-0">{title}</h2>
       )}
+      <Image
+        src="/skull-2.svg"
+        alt=""
+        width={30}
+        height={30}
+        className="opacity-20"
+      />
     </div>
   );
 }
