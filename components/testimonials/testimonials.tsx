@@ -34,7 +34,7 @@ const testimonials = [
     image: "/karl.png",
   },
   {
-    text: "The Selbekk Studio team delivered our project with astonishing speed and quality, far exceeding our expectations. Since the launch, our business has seen a noticeable increase in traffic and sales.",
+    text: "The Selbekk Labs team delivered our project with astonishing speed and quality, far exceeding our expectations. Since the launch, our business has seen a noticeable increase in traffic and sales.",
     title: "Per Selbekk",
     description: "Founder & CEO - Renevo Capital",
     image: "/profile-shot-per.png",
