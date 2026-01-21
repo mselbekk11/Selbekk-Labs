@@ -38,7 +38,7 @@ const projects = [
     image: "/fire-icons.png",
     title: "Fire Icons",
     description: "Application to customize and download icons",
-    link: "https://www.fireicons.io/",
+    link: "https://www.fireicons.cc/",
   },
 ];
 
