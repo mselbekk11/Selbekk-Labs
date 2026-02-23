@@ -26,7 +26,7 @@ const projects = [
     image: "/growth.png",
     title: "Growth",
     description: "A Mentorship Programme for personal trainers",
-    link: "https://growth-two.vercel.app/",
+    link: "https://growththecoachesmentorship.com/",
   },
   {
     image: "/aol.png",
