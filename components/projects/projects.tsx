@@ -10,6 +10,18 @@ const projects = [
     description: "Luxury travel and investment application",
     link: "https://www.roaminternational.com/",
   },
+    {
+    image: "/floot2.png",
+    title: "Floot",
+    description: "Build apps and websites without needing to code",
+    link: "https://floot.com/en",
+  },
+    {
+    image: "/growth.png",
+    title: "Growth",
+    description: "A Mentorship Programme for personal trainers",
+    link: "https://growththecoachesmentorship.com/",
+  },
   {
     image: "/trizzy.png",
     title: "Trizzy",
@@ -23,23 +35,17 @@ const projects = [
     link: "https://www.picai.so/",
   },
   {
-    image: "/growth.png",
-    title: "Growth",
-    description: "A Mentorship Programme for personal trainers",
-    link: "https://growththecoachesmentorship.com/",
-  },
-  {
     image: "/aol.png",
     title: "Advanced Ortho",
     description: "Website for an Orthodontic Appliance manufacturer",
     link: "https://www.advancedortholabsf.com/",
   },
-  {
-    image: "/fire-icons.png",
-    title: "Fire Icons",
-    description: "Application to customize and download icons",
-    link: "https://www.fireicons.cc/",
-  },
+  // {
+  //   image: "/fire-icons.png",
+  //   title: "Fire Icons",
+  //   description: "Application to customize and download icons",
+  //   link: "https://www.fireicons.cc/",
+  // },
 ];
 
 export default function Projects() {
