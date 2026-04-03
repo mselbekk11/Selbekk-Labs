@@ -6,6 +6,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import ConvexClerkUserSync from "@/components/ConvexClerkUserSync";
 import Header from "@/components/header/header";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -111,7 +112,10 @@ export default function RootLayout({
           <ConvexClientProvider>
             <ConvexClerkUserSync />
             <Header />
-            <main className="pt-16 relative z-10">{children}</main>
+            <main className="pt-16 relative z-10">
+              {children}
+              <Analytics />
+            </main>
           </ConvexClientProvider>
         </ClerkProvider>
       </body>
