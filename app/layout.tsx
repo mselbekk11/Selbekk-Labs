@@ -125,6 +125,12 @@ export default function RootLayout({
         ></script>
       </body>
       <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
+      <Script
+        src="https://datafa.st/js/script.js"
+        data-website-id="dfid_tuTCcAxTFcm8mjoqo01Yr"
+        data-domain="www.selbekk.dev"
+        strategy="afterInteractive"
+      />
     </html>
   );
 }
