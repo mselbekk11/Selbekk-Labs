@@ -119,7 +119,7 @@ export default function RootLayout({
           </ConvexClientProvider>
         </ClerkProvider>
         <script
-          src="http://localhost:3000/widget/embed.js"
+          src="https://www.sensai.co/widget/embed.js"
           data-chatbot-id="jh71vy147ek2swsm0vxr7c1p1985jv31"
           async
         ></script>
