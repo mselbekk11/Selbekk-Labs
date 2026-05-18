@@ -118,11 +118,11 @@ export default function RootLayout({
             </main>
           </ConvexClientProvider>
         </ClerkProvider>
-        <script
+        {/* <script
           src="https://www.sensai.co/widget/embed.js"
           data-chatbot-id="jh71vy147ek2swsm0vxr7c1p1985jv31"
           async
-        ></script>
+        ></script> */}
       </body>
       <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
       <Script
