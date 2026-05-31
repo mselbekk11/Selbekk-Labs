@@ -41,7 +41,7 @@ export function TextEffectDesktop() {
             },
           }}
         >
-          Beautiful websites and AI-powered experiences,
+          Beautiful websites and AI-powered experiences
         </TextEffect>
         <TextEffect
           per="char"
