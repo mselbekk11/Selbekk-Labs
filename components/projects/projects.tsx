@@ -5,18 +5,24 @@ import { DottedBorder } from "@/lib/dotted-border";
 
 const projects = [
   {
+    image: "/sensai.png",
+    title: "Sensai",
+    description: "AI Sales & Support Agent for Businesses",
+    link: "https://www.sensai.co/",
+  },
+  {
     image: "/roam.png",
     title: "Roam International",
     description: "Luxury travel and investment application",
     link: "https://www.roaminternational.com/",
   },
-    {
+  {
     image: "/floot2.png",
     title: "Floot",
     description: "Build apps and websites without needing to code",
     link: "https://floot.com/en",
   },
-    {
+  {
     image: "/growth.png",
     title: "Growth",
     description: "A Mentorship Programme for personal trainers",
@@ -27,12 +33,6 @@ const projects = [
     title: "Trizzy",
     description: "Application to virtually try on clothes with AI",
     link: "https://www.trizzy.ai/",
-  },
-  {
-    image: "/picai.png",
-    title: "PicAI",
-    description: "Transform your selfies into studio quality images using AI",
-    link: "https://www.picai.so/",
   },
   {
     image: "/aol.png",
